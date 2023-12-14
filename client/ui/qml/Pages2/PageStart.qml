@@ -93,6 +93,7 @@ PageType {
         target: InstallController
 
         function onInstallationErrorOccurred(errorMessage) {
+            PageController.showBusyIndicator(false)
             PageController.showErrorMessage(errorMessage)
 
             var needCloseCurrentPage = false
@@ -110,6 +111,7 @@ PageType {
 
         function onUpdateContainerFinished(message) {
             PageController.showNotificationMessage(message)
+            PageController.closePage()
         }
     }
 
@@ -118,6 +120,7 @@ PageType {
 
         function onReconnectWithUpdatedContainer(message) {
             PageController.showNotificationMessage(message)
+            PageController.closePage()
         }
     }
 
