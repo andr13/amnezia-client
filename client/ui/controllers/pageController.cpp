@@ -77,7 +77,7 @@ void PageController::closeWindow()
 void PageController::keyPressEvent(Qt::Key key)
 {
     switch (key) {
-    case Qt::Key_Back://emit closePage();
+    case Qt::Key_Back:
     case Qt::Key_Escape: emit escapePressed(); break;;
     default: return;
     }

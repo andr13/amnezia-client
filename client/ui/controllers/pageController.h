@@ -123,6 +123,7 @@ signals:
 
     void escapePressed();
 
+    void forceActiveFocus();
 private:
     QSharedPointer<ServersModel> m_serversModel;
 

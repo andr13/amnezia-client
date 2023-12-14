@@ -80,5 +80,6 @@ Drawer {
         if (initialPageNavigationBarColor !== 0xFF1C1D21) {
             PageController.updateNavigationBarColor(initialPageNavigationBarColor)
         }
+        PageController.forceActiveFocus()
     }
 }

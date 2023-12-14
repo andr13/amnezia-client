@@ -45,6 +45,10 @@ PageType {
                 stackView.pop()
             }
         }
+
+        function onEscapePressed() {
+            PageController.closePage()
+        }
     }
 
     Connections {

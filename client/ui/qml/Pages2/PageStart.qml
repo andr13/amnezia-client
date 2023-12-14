@@ -79,10 +79,10 @@ PageType {
 
         function onEscapePressed() {
             var pageName = tabBarStackView.currentItem.objectName
-            console.log(pageName)
             if ((pageName === PageController.getPagePath(PageEnum.PageShare)) ||
                     (pageName === PageController.getPagePath(PageEnum.PageSettings))) {
                 PageController.goToPageHome()
+                tabBar.previousIndex = 0
             } else {
                 PageController.closePage()
             }
