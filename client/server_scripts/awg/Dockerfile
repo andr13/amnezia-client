@@ -1,4 +1,4 @@
-ARG AWG_RELEASE="0.2.1"
+ARG AWG_RELEASE=0.2.1
 
 FROM amneziavpn/amneziawg-go:${AWG_RELEASE}
 
