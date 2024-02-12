@@ -1,4 +1,6 @@
-FROM amneziavpn/amnezia-wg:latest
+ARG AWG_RELEASE="0.2.0"
+
+FROM amneziavpn/amneziawg-go:${AWG_RELEASE}
 
 LABEL maintainer="AmneziaVPN"
 
