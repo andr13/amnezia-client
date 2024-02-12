@@ -26,9 +26,9 @@ iptables -t nat -A POSTROUTING -s $WIREGUARD_SUBNET_IP/$WIREGUARD_SUBNET_CIDR -o
 iptables -t nat -A POSTROUTING -s $WIREGUARD_SUBNET_IP/$WIREGUARD_SUBNET_CIDR -o eth1 -j MASQUERADE
 
 while :; do
-    if [ -z "$(ps | grep /usr/bin/amneziawg-go | grep -v grep)" ]; then
-        break
-    else
+    if [ ! -z "$(ps | grep /usr/bin/amneziawg-go | grep -v grep)" ]; then
         sleep 1m
+    else
+        break
     fi
 done
