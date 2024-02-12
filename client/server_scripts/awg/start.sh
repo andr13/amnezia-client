@@ -25,4 +25,10 @@ iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -t nat -A POSTROUTING -s $WIREGUARD_SUBNET_IP/$WIREGUARD_SUBNET_CIDR -o eth0 -j MASQUERADE
 iptables -t nat -A POSTROUTING -s $WIREGUARD_SUBNET_IP/$WIREGUARD_SUBNET_CIDR -o eth1 -j MASQUERADE
 
-tail -f /dev/null
+while :; do
+    if [ -z "$(ps | grep /usr/bin/amneziawg-go | grep -v grep)" ]; then
+        break
+    else
+        sleep 1m
+    fi
+done
